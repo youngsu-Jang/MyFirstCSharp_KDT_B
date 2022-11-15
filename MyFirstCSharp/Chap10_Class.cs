@@ -30,15 +30,16 @@ namespace MyFirstCSharp
             // 클래스 이름과 같은 특수 형태의 메서드
             // 클래스가 객체화 될때 실행되는 코드 의 모음(묶음단위)
 
-            MessageBox.Show("안녕하세요");
-            sValue = "반갑습니다.";
-            string sValue2 = "화이팅";
+            //MessageBox.Show("안녕하세요");
+            //sValue = "반갑습니다.";
+            //string sValue2 = "화이팅";
         }
 
         // 2. 필드 멤버
         // 클래스 에서 사용되는 변수, 객체 등을 기입 멤버.
         string sValue = "안녕하세요";
         int iValue = 10;
+        public string sArm = "팔";
 
         // 3. 메서드(함수) 멤버
         void Method1()

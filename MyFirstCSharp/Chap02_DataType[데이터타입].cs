@@ -7,10 +7,6 @@ using System.Threading.Tasks;
 // internal : 동일한 프로젝트 내에서만 호출이 가능한 클래스
 namespace MyFirstCSharp
 {
-
-    //  GitHub Test 2
-    //  GitHub Test 3
-    //  GitHub Test 4
     internal class Chap02_DataType
     {
         // 1.정수형 데이터 타입과 변수

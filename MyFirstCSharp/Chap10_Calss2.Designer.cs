@@ -51,6 +51,7 @@
             this.btnCalssInstance2.TabIndex = 1;
             this.btnCalssInstance2.Text = "클래스 생성 및 호출2";
             this.btnCalssInstance2.UseVisualStyleBackColor = true;
+            this.btnCalssInstance2.Click += new System.EventHandler(this.btnCalssInstance2_Click);
             // 
             // btnMethodCall
             // 

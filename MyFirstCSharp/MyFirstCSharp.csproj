@@ -8,4 +8,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="NameSpace_Check">
+      <HintPath>..\NameSpace_Check\bin\Debug\net6.0\NameSpace_Check.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

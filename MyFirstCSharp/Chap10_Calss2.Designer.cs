@@ -61,6 +61,7 @@
             this.btnMethodCall.TabIndex = 2;
             this.btnMethodCall.Text = "다른 클래스 메서드 호출하기";
             this.btnMethodCall.UseVisualStyleBackColor = true;
+            this.btnMethodCall.Click += new System.EventHandler(this.btnMethodCall_Click);
             // 
             // Chap10_Calss2
             // 

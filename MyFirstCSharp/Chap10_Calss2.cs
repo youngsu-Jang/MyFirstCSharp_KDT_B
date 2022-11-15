@@ -14,10 +14,14 @@ namespace MyFirstCSharp
     {
         //  클래스가 객체화 될때 
         //  필드 멤버 -> 생성자 멤버 순으로 클래스가 객체화 된다. 
-        
+
+        // ************필드**********
+        // Chap10_Class 클래스를 필드멤버로 객체화. 
+        Chap10_Class CHAP10 = new Chap10_Class();
 
         public Chap10_Calss2()
         {
+            // 화면 디자인을 표현. 
             InitializeComponent();
             CHAP10.sArm = "로봇팔";
         }
@@ -46,9 +50,11 @@ namespace MyFirstCSharp
 
             MessageBox.Show(CHAP10.sArm);
         }
-        
-        // ************필드**********
-        // Chap10_Class 클래스를 필드멤버로 객체화. 
-        Chap10_Class CHAP10 = new Chap10_Class();
+
+        private void btnMethodCall_Click(object sender, EventArgs e)
+        {
+            // 다른 클래스의 메서드 호출.
+            CHAP10.Method1();
+        }
     }
 }

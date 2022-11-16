@@ -122,4 +122,15 @@ namespace MyFirstCSharp
         public const string sConst_Value = "상수값";
     }
 
+    // 클래스 자체를 Static 클래스로 지정할 경우.
+    // 클래스 내의 모든 멤버(필드.생성자.메서드) 는 Static 
+    // 형식으로 선언 되어야 한다.
+
+    static class Static_Class3
+    {
+        private static string sValue = "";
+        public const string sValue2 = "";
+         
+    }
+    
 }

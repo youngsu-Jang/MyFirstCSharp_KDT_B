@@ -35,7 +35,7 @@ namespace MyFirstCSharp
             // 1. 숫자형 데이터 타입에 Null 을 허용 하는 방법. 
             // 데이터 타입 뒤에 ? 를 삽입하여 임시적으로 Null 을 허용 
             // 할수 있도록 변경가능. 
-            int? iValue = null;
+            double? iValue = null;
             string? sValue = null;
 
             MessageBox.Show(Convert.ToString(iValue.HasValue)); //False
@@ -54,7 +54,8 @@ namespace MyFirstCSharp
             // Null 병합 연산자 '??' 
             // 데이터 타입의 유형이 Null 인지 판단하는 용법.
 
-            //A ?? : 
+            //A ?? B : 만약에 A 가 Null 이면 B 를 표현하고 
+            //         Null 이 아니면 A 를 표현하라.
 
             int? iValue = null;
 

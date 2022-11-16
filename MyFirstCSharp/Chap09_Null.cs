@@ -54,6 +54,8 @@ namespace MyFirstCSharp
             // Null 병합 연산자 '??' 
             // 데이터 타입의 유형이 Null 인지 판단하는 용법.
 
+            //A ?? : 
+
             int? iValue = null;
 
             // 1. iValue 의값이 Null 인지 판단.

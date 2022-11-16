@@ -15,7 +15,7 @@ namespace MyFirstCSharp
     public partial class Chap12_ClassTest_Main : Form
     {
         public static string sRunStopStatus = "휴식중"; // 현재 상태를 나타내는 변수.
-
+        protected string sValue = "가";
         public Chap12_ClassTest_Main()
         {
             InitializeComponent(); 

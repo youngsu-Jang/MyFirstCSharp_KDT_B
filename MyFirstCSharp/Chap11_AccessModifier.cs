@@ -4,7 +4,6 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using NameSpace_Check;
 
 namespace MyFirstCSharp
 {
@@ -65,7 +64,7 @@ namespace MyFirstCSharp
         public NewClass() 
         {
             CHAP11.sPublic = "외부에서 데이터 변형가능";
-            
+            //CHAP11.sPrivate
         }
     }
 }

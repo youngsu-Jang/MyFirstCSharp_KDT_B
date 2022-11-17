@@ -36,6 +36,14 @@
             this.btnStringReturn = new System.Windows.Forms.Button();
             this.btnIntReturn = new System.Windows.Forms.Button();
             this.btnDefaultReturn = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCatch2 = new System.Windows.Forms.Button();
+            this.btnCatch1 = new System.Windows.Forms.Button();
+            this.btnArrayArg = new System.Windows.Forms.Button();
+            this.btnArrayReturn = new System.Windows.Forms.Button();
+            this.btnCalssMCall = new System.Windows.Forms.Button();
+            this.btnRef = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtTtile
@@ -114,11 +122,86 @@
             this.btnDefaultReturn.UseVisualStyleBackColor = true;
             this.btnDefaultReturn.Click += new System.EventHandler(this.btnDefaultReturn_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnCatch2);
+            this.groupBox1.Controls.Add(this.btnCatch1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 207);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(370, 74);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "술래잡기";
+            // 
+            // btnCatch2
+            // 
+            this.btnCatch2.Location = new System.Drawing.Point(194, 19);
+            this.btnCatch2.Name = "btnCatch2";
+            this.btnCatch2.Size = new System.Drawing.Size(160, 39);
+            this.btnCatch2.TabIndex = 1;
+            this.btnCatch2.UseVisualStyleBackColor = true;
+            this.btnCatch2.Click += new System.EventHandler(this.btnCatch2_Click);
+            // 
+            // btnCatch1
+            // 
+            this.btnCatch1.Location = new System.Drawing.Point(6, 19);
+            this.btnCatch1.Name = "btnCatch1";
+            this.btnCatch1.Size = new System.Drawing.Size(170, 39);
+            this.btnCatch1.TabIndex = 0;
+            this.btnCatch1.Text = "나 잡아 봐라~~";
+            this.btnCatch1.UseVisualStyleBackColor = true;
+            this.btnCatch1.Click += new System.EventHandler(this.btnCatch1_Click);
+            // 
+            // btnArrayArg
+            // 
+            this.btnArrayArg.Location = new System.Drawing.Point(12, 287);
+            this.btnArrayArg.Name = "btnArrayArg";
+            this.btnArrayArg.Size = new System.Drawing.Size(115, 58);
+            this.btnArrayArg.TabIndex = 9;
+            this.btnArrayArg.Text = "Array Argument";
+            this.btnArrayArg.UseVisualStyleBackColor = true;
+            this.btnArrayArg.Click += new System.EventHandler(this.btnArrayArg_Click);
+            // 
+            // btnArrayReturn
+            // 
+            this.btnArrayReturn.Location = new System.Drawing.Point(133, 287);
+            this.btnArrayReturn.Name = "btnArrayReturn";
+            this.btnArrayReturn.Size = new System.Drawing.Size(115, 58);
+            this.btnArrayReturn.TabIndex = 10;
+            this.btnArrayReturn.Text = "Array Return";
+            this.btnArrayReturn.UseVisualStyleBackColor = true;
+            this.btnArrayReturn.Click += new System.EventHandler(this.btnArrayReturn_Click);
+            // 
+            // btnCalssMCall
+            // 
+            this.btnCalssMCall.Location = new System.Drawing.Point(254, 287);
+            this.btnCalssMCall.Name = "btnCalssMCall";
+            this.btnCalssMCall.Size = new System.Drawing.Size(115, 58);
+            this.btnCalssMCall.TabIndex = 11;
+            this.btnCalssMCall.Text = "Class Method Call";
+            this.btnCalssMCall.UseVisualStyleBackColor = true;
+            this.btnCalssMCall.Click += new System.EventHandler(this.btnCalssMCall_Click);
+            // 
+            // btnRef
+            // 
+            this.btnRef.Location = new System.Drawing.Point(12, 360);
+            this.btnRef.Name = "btnRef";
+            this.btnRef.Size = new System.Drawing.Size(79, 58);
+            this.btnRef.TabIndex = 12;
+            this.btnRef.Text = "ref";
+            this.btnRef.UseVisualStyleBackColor = true;
+            this.btnRef.Click += new System.EventHandler(this.btnRef_Click);
+            // 
             // Chap14_Method
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(505, 478);
+            this.ClientSize = new System.Drawing.Size(681, 565);
+            this.Controls.Add(this.btnRef);
+            this.Controls.Add(this.btnCalssMCall);
+            this.Controls.Add(this.btnArrayReturn);
+            this.Controls.Add(this.btnArrayArg);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnDefaultReturn);
             this.Controls.Add(this.btnIntReturn);
             this.Controls.Add(this.btnStringReturn);
@@ -129,6 +212,7 @@
             this.Controls.Add(this.txtTtile);
             this.Name = "Chap14_Method";
             this.Text = "메서드를 공부합니다.";
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,5 +228,12 @@
         private Button btnStringReturn;
         private Button btnIntReturn;
         private Button btnDefaultReturn;
+        private GroupBox groupBox1;
+        private Button btnCatch2;
+        private Button btnCatch1;
+        private Button btnArrayArg;
+        private Button btnArrayReturn;
+        private Button btnCalssMCall;
+        private Button btnRef;
     }
 }

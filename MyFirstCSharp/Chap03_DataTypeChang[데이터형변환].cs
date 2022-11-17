@@ -176,8 +176,9 @@ namespace MyFirstCSharp
                   경우에 따라서는 데이터 타입에 ? 키워드를 추가하여
                   NULL 로 처리 할수 있다.
              */
+
             int? iValue = null;
-            string sValue = null;
+            string? sValue = null;
 
             MessageBox.Show(Convert.ToString(sValue));
             MessageBox.Show(sValue.ToString());

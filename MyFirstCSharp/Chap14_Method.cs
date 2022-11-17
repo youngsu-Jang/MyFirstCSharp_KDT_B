@@ -218,21 +218,21 @@ namespace MyFirstCSharp
             int iA_ValueRef = 20;
 
             // 13, 20, 20, 13 , 13, 13
-            MessageBox.Show($"인수     iA_Value    의 값은 : {iA_Value}");     // 1
-            MessageBox.Show($"Ref 인수 iA_ValueRef 의 값은 : {iA_ValueRef}");  // 2
+            MessageBox.Show($"인수     iA_Value    의 값은 : {iA_Value}");     // 1 번째
+            MessageBox.Show($"Ref 인수 iA_ValueRef 의 값은 : {iA_ValueRef}");  // 2 번째
 
             RefMethod(iA_Value, ref iA_ValueRef);
 
-            MessageBox.Show($"iA_Value    의 값은 : {iA_Value}");      // 5
-            MessageBox.Show($"iA_ValueRef 의 값은 : {iA_ValueRef}");   // 6 
+            MessageBox.Show($"iA_Value    의 값은 : {iA_Value}");      // 5 번째
+            MessageBox.Show($"iA_ValueRef 의 값은 : {iA_ValueRef}");   // 6 번째
         }
 
         private void RefMethod(int iP_Value, ref int iP_ValueRef)
         {
-            MessageBox.Show($"Ref 인자 iP_ValueRef 의 값은 : {iP_ValueRef}");  // 3
+            MessageBox.Show($"Ref 인자 iP_ValueRef 의 값은 : {iP_ValueRef}");  // 3 번째
             iP_ValueRef = iP_Value;
             iP_Value    = 10;
-            MessageBox.Show($"Ref 인자 iP_ValueRef 의 값은 : {iP_ValueRef}");  // 4
+            MessageBox.Show($"Ref 인자 iP_ValueRef 의 값은 : {iP_ValueRef}");  // 4 번째
         }
 
         #endregion

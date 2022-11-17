@@ -214,27 +214,58 @@ namespace MyFirstCSharp
         #region < Ref 인자 반환(값 참조), Read/Write > 
         private void btnRef_Click(object sender, EventArgs e)
         {
-            int iA_Value    = 13;
-            int iA_ValueRef = 20;
+            // Ref 
+            // ref 인수값을 참조 형식으로 변형시켜 ref 인자와 같은 데이터 주소(값) 을 
+            // 바라볼수 있도록 만들어주는 키워드.
+            // Ref 키워드의 인수를 사용 하기 위해서는 반드시 값이 할당 되어있는 상태여야 한다. 
+
+            
+             
+            int iA_Value    = 13;  // 1번째 
+            //int iA_ValueRef;  // 2번째 (Ref 로 사용할 인수는 반드시 초기화(데이터대입) 가 되어있어야한다.
+            int iA_ValueRef = 20;  // 2번째
 
             // 13, 20, 20, 13 , 13, 13
-            MessageBox.Show($"인수     iA_Value    의 값은 : {iA_Value}");     // 1 번째
-            MessageBox.Show($"Ref 인수 iA_ValueRef 의 값은 : {iA_ValueRef}");  // 2 번째
+            MessageBox.Show($"인수     iA_Value    의 값은 : {iA_Value}");      
+            MessageBox.Show($"Ref 인수 iA_ValueRef 의 값은 : {iA_ValueRef}");   
 
-            RefMethod(iA_Value, ref iA_ValueRef);
+            RefMethod(iA_Value, ref iA_ValueRef); // 3번째 
 
-            MessageBox.Show($"iA_Value    의 값은 : {iA_Value}");      // 5 번째
-            MessageBox.Show($"iA_ValueRef 의 값은 : {iA_ValueRef}");   // 6 번째
-        }
+            MessageBox.Show($"iA_Value    의 값은 : {iA_Value}");      
+            MessageBox.Show($"iA_ValueRef 의 값은 : {iA_ValueRef}");   
+        }                                                              
 
-        private void RefMethod(int iP_Value, ref int iP_ValueRef)
+        private void RefMethod(int iP_Value, ref int iP_ValueRef) // 4번째 
         {
-            MessageBox.Show($"Ref 인자 iP_ValueRef 의 값은 : {iP_ValueRef}");  // 3 번째
-            iP_ValueRef = iP_Value;
-            iP_Value    = 10;
-            MessageBox.Show($"Ref 인자 iP_ValueRef 의 값은 : {iP_ValueRef}");  // 4 번째
+            MessageBox.Show($"Ref 인자 iP_ValueRef 의 값은 : {iP_ValueRef}");  
+            iP_ValueRef = iP_Value;   // 5번째
+            iP_Value    = 10;         // 6번째
+            MessageBox.Show($"Ref 인자 iP_ValueRef 의 값은 : {iP_ValueRef}");  
         }
 
+        #endregion
+
+        #region < Out 인자 반환, 값을 할당하지 않은 out 인자, Write >
+        private void btnOut_Click(object sender, EventArgs e)
+        {
+            // Out 키워드는 인수값을 초기화 할 필요가 없다. 
+            // 인자변수는 메서드 내에서 반드시 초기화(데이터 값이 대입) 되어야 한다. 
+            int iA_Value = 1;
+            int iA_ValueOut;
+
+            OutMethod(iA_Value, out iA_ValueOut);
+
+            MessageBox.Show($"iA_Value 의 값은    : {iA_Value}");
+            MessageBox.Show($"iA_ValueOut 의 값은 : {iA_ValueOut}");
+        }
+
+        private void OutMethod(int iP_Value, out int iP_ValueOut)
+        {
+            // 메서드 내에서 인자 out iP_ValueOut 에 값을 할당 하지 않으면 오류가 발생한다.
+            iP_ValueOut = iP_Value;
+            iP_Value    = 30;
+            MessageBox.Show($"Out 인자 iP_ValueOut 의 값은 : {iP_ValueOut}");
+        }
         #endregion
     }
 

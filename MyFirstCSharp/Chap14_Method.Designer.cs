@@ -43,6 +43,7 @@
             this.btnArrayReturn = new System.Windows.Forms.Button();
             this.btnCalssMCall = new System.Windows.Forms.Button();
             this.btnRef = new System.Windows.Forms.Button();
+            this.btnOut = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -192,11 +193,22 @@
             this.btnRef.UseVisualStyleBackColor = true;
             this.btnRef.Click += new System.EventHandler(this.btnRef_Click);
             // 
+            // btnOut
+            // 
+            this.btnOut.Location = new System.Drawing.Point(97, 360);
+            this.btnOut.Name = "btnOut";
+            this.btnOut.Size = new System.Drawing.Size(79, 58);
+            this.btnOut.TabIndex = 13;
+            this.btnOut.Text = "Out";
+            this.btnOut.UseVisualStyleBackColor = true;
+            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
+            // 
             // Chap14_Method
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(681, 565);
+            this.Controls.Add(this.btnOut);
             this.Controls.Add(this.btnRef);
             this.Controls.Add(this.btnCalssMCall);
             this.Controls.Add(this.btnArrayReturn);
@@ -235,5 +247,6 @@
         private Button btnArrayReturn;
         private Button btnCalssMCall;
         private Button btnRef;
+        private Button btnOut;
     }
 }

@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading.Tasks.Dataflow;
+using System.Threading.Tasks.Sources;
 using System.Transactions;
 using System.Windows.Forms;
 
@@ -263,6 +265,64 @@ namespace MyFirstCSharp
             iP_ValueOut = iP_Value;
             iP_Value    = 30;
             MessageBox.Show($"Out 인자 iP_ValueOut 의 값은 : {iP_ValueOut}");
+        }
+        #endregion
+
+
+        #region < IN 형식의 인자 설정, ReadOnly >
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            // IN 인자 타입
+            // 읽기 전용 속성으로 변경, 수정을 할 수 없다. 
+            int iValue = 10;
+            InMethod("문자인수", in iValue);
+        
+        }
+
+        void InMethod(string sValue, in int ivalue)
+        {
+            MessageBox.Show(Convert.ToString(ivalue));
+
+            // ivalue 는 In  타입 이므로 수정 또는 변경을 할 수 없다.
+            // ivalue = 10;
+        }
+
+        #endregion
+
+        #region < 메서드 OverLoding >
+        private void btnOverLoding_Click(object sender, EventArgs e)
+        {
+            // OverLoding
+            // 예를들어 인자를 메세지 박스로 표현하는 
+            // 일을 해야하는 메서드가 있다고 할때
+            // 같은 메소드 이름으로 인자 데이터 변수
+            // 및 개수를 다르게 하여 여러 상황에
+            // 맞게 사용할수 있게 만드는 기능. 
+
+            ShowOL1("안녕하세요", "반갑습니다.");
+
+            // 정수형으로 인수 인자 값을 처리하는 메서드를 만들기 위해서는
+            // 메서드 이름이 다른 기능을 따로 구현해야한다. 
+            // 즉. 반환하는 결과는 같지만 상황에(인수,인자값의 변화) 따라서 
+            // 여러가지 이름의 메서드를 만들어야 한다. 
+            ShoMessageInt(10, 20);
+
+            ShowOL1(10, 20);
+        }
+
+        private void ShowOL1(string sValu1,string sValue2)
+        {
+            MessageBox.Show(sValu1 + sValue2);
+        }
+        private void ShoMessageInt(int ivalue, int iValue2)
+        {
+            MessageBox.Show(Convert.ToString(ivalue) + Convert.ToString(iValue2));
+        }
+
+        private void ShowOL1(int iVlaue, int iValue2)
+        {
+            MessageBox.Show($"{iVlaue} {iValue2}");
         }
         #endregion
     }

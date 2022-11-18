@@ -44,6 +44,8 @@
             this.btnCalssMCall = new System.Windows.Forms.Button();
             this.btnRef = new System.Windows.Forms.Button();
             this.btnOut = new System.Windows.Forms.Button();
+            this.btnIn = new System.Windows.Forms.Button();
+            this.btnOverLoding = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -203,11 +205,33 @@
             this.btnOut.UseVisualStyleBackColor = true;
             this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
             // 
+            // btnIn
+            // 
+            this.btnIn.Location = new System.Drawing.Point(182, 360);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(79, 58);
+            this.btnIn.TabIndex = 14;
+            this.btnIn.Text = "In";
+            this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
+            // 
+            // btnOverLoding
+            // 
+            this.btnOverLoding.Location = new System.Drawing.Point(12, 424);
+            this.btnOverLoding.Name = "btnOverLoding";
+            this.btnOverLoding.Size = new System.Drawing.Size(79, 58);
+            this.btnOverLoding.TabIndex = 15;
+            this.btnOverLoding.Text = "OverLoding";
+            this.btnOverLoding.UseVisualStyleBackColor = true;
+            this.btnOverLoding.Click += new System.EventHandler(this.btnOverLoding_Click);
+            // 
             // Chap14_Method
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 565);
+            this.ClientSize = new System.Drawing.Size(608, 581);
+            this.Controls.Add(this.btnOverLoding);
+            this.Controls.Add(this.btnIn);
             this.Controls.Add(this.btnOut);
             this.Controls.Add(this.btnRef);
             this.Controls.Add(this.btnCalssMCall);
@@ -248,5 +272,7 @@
         private Button btnCalssMCall;
         private Button btnRef;
         private Button btnOut;
+        private Button btnIn;
+        private Button btnOverLoding;
     }
 }

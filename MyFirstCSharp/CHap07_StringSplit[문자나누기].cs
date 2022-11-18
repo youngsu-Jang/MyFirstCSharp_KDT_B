@@ -12,6 +12,8 @@ namespace MyFirstCSharp
 {
     public partial class CHap07_StringSplit : Form
     {
+
+
         public CHap07_StringSplit()
         {
             InitializeComponent();

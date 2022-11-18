@@ -180,7 +180,6 @@ namespace MyFirstCSharp
         }
         #endregion
 
-
         #region < 배열을 리턴 하는 경우 > 
         private void btnArrayReturn_Click(object sender, EventArgs e)
         {
@@ -211,7 +210,6 @@ namespace MyFirstCSharp
             New_Class.IntSum2(10, 20);
         }
         #endregion
-
 
         #region < Ref 인자 반환(값 참조), Read/Write > 
         private void btnRef_Click(object sender, EventArgs e)
@@ -267,7 +265,6 @@ namespace MyFirstCSharp
             MessageBox.Show($"Out 인자 iP_ValueOut 의 값은 : {iP_ValueOut}");
         }
         #endregion
-
 
         #region < IN 형식의 인자 설정, ReadOnly >
 
@@ -343,7 +340,41 @@ namespace MyFirstCSharp
 
             MessageBox.Show($"결과는 {bFlag} 이고 값은 {iResult}입니다.");
         }
-        
+
+
+        #endregion
+
+        #region < 일반화 메소드 Generic Method >
+        private void btnGenericMethod_Click(object sender, EventArgs e)
+        {
+            // 같은 기능을 하는 메서드가 인자의 데이터 타입만 바뀌는 경우.
+            // 인자의 데이터 타입이 같은 메서드를 데이터 타입에 따라 오버로딩 
+            // 할 경우에는 
+            // 메소드 일반화 를 통하여 여러 데이터 타입의 인자를 처리하는
+            // 메서드를 하나만 만들어서 관리 할 수 있다. 
+
+            //StringSum("안녕하세요", "반갑습니다."); // 안녕하세요_반갑습니다.
+            G_StringSum<string>("안녕하세요", "반갑습니다.");
+            G_StringSum<int>(100, 200);
+
+        }
+
+        void StringSum(string sValue, string sValue2)
+        {
+            MessageBox.Show($"{sValue}_{sValue2}");
+        }
+        void StringSum(int iValue, int iValue2)
+        {
+            MessageBox.Show($"{iValue}_{iValue2}");
+        }
+
+        // 인수 인자 개수도 같은데 데이터 타입만 바뀔경우는
+        // 메서드를 하나만 만들어서 구현 할 수 있다. 
+        // Generic Method
+        void G_StringSum<T>(T gValue, T gValue2)
+        {
+            MessageBox.Show($"{gValue}_{gValue2}");
+        }
 
         #endregion
     }

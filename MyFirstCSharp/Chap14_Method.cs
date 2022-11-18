@@ -324,6 +324,27 @@ namespace MyFirstCSharp
         {
             MessageBox.Show($"{iVlaue} {iValue2}");
         }
+
+        #endregion
+
+        #region < Out 참조전달 방식을 이용한 TryParse 메소드 만들어보기 >
+        private void btnTryParse_Click(object sender, EventArgs e)
+        {
+            string sValue = "234234"; // 숫자로 변경 될 문자
+            int iResult;  // 변경된 숫자가 담기는 정수 변수.
+            bool bFlag;   // TryParse 의 결과 가 담기는 변수.
+
+            // TryParse 의 기능 복기.
+            //bFlag = int.TryParse(sValue, out iResult);
+
+
+            // TryParse 기능 구현 실습
+            bFlag = int_.TryParse(sValue, out iResult);
+
+            MessageBox.Show($"결과는 {bFlag} 이고 값은 {iResult}입니다.");
+        }
+        
+
         #endregion
     }
 
@@ -348,4 +369,20 @@ namespace MyFirstCSharp
         }
     }
 
+    class int_
+    {
+        public static bool TryParse(string sValue, out int iResult)
+        {
+            try
+            {
+                iResult = int.Parse(sValue);
+                return true;
+            }
+            catch
+            {
+                iResult = 0;
+                return false;
+            } 
+        }
+    }
 }

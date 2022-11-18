@@ -46,6 +46,7 @@
             this.btnOut = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
             this.btnOverLoding = new System.Windows.Forms.Button();
+            this.btnTryParse = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -225,11 +226,22 @@
             this.btnOverLoding.UseVisualStyleBackColor = true;
             this.btnOverLoding.Click += new System.EventHandler(this.btnOverLoding_Click);
             // 
+            // btnTryParse
+            // 
+            this.btnTryParse.Location = new System.Drawing.Point(12, 488);
+            this.btnTryParse.Name = "btnTryParse";
+            this.btnTryParse.Size = new System.Drawing.Size(79, 58);
+            this.btnTryParse.TabIndex = 16;
+            this.btnTryParse.Text = "TryParse";
+            this.btnTryParse.UseVisualStyleBackColor = true;
+            this.btnTryParse.Click += new System.EventHandler(this.btnTryParse_Click);
+            // 
             // Chap14_Method
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 581);
+            this.Controls.Add(this.btnTryParse);
             this.Controls.Add(this.btnOverLoding);
             this.Controls.Add(this.btnIn);
             this.Controls.Add(this.btnOut);
@@ -274,5 +286,6 @@
         private Button btnOut;
         private Button btnIn;
         private Button btnOverLoding;
+        private Button btnTryParse;
     }
 }

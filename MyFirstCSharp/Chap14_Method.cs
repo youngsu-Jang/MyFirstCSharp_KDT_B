@@ -48,22 +48,22 @@ namespace MyFirstCSharp
         #endregion
 
         #region < 인수와 인자 값을 통한 함수의 호출 >
-        void btnArg_Par_Click(object sender, EventArgs e)
+        private void btnArg_Par_Click(object sender, EventArgs e)
         {
            //  인수 값을 전달 하고 전달된 값을 인자로 처리하는 메서드 유형.
 
-            int iValue = 234234;
+            int iValue = 234234;  // 1
 
             // sValue 라는 변수의 값을 인수값으로 던져준다.
-            ShowMessage2(iValue); // sMessage = sValue;
+            ShowMessage2(iValue); // sMessage = sValue; 2
         }
 
         
-        void ShowMessage2(int iMessage )
+        private void ShowMessage2(int iMessage )
         {
-            MessageBox.Show(Convert.ToString(iMessage));
-            //txtTitle.Text = Convert.ToString(iMessage);
-            lblTitle.Text = Convert.ToString(iMessage);
+            MessageBox.Show(Convert.ToString(iMessage));  // 3
+            //txtTitle.Text = Convert.ToString(iMessage);  //4 
+            lblTitle.Text = Convert.ToString(iMessage);  // 5
         }
 
         #endregion
@@ -93,15 +93,15 @@ namespace MyFirstCSharp
 
         private void btnStringReturn_Click(object sender, EventArgs e)
         {
-            string sResult = ShowMessage4("안녕하세요.");
-            MessageBox.Show(sResult);
+            string sResult = ShowMessage4("안녕하세요."); 
+            MessageBox.Show(sResult); 
         }
         
 
 
         private string ShowMessage4(string sMessage) 
         {
-            MessageBox.Show(sMessage);
+            MessageBox.Show(sMessage); 
             return "성공";
         }
         #endregion

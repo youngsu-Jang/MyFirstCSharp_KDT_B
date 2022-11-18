@@ -127,7 +127,7 @@ namespace MyFirstCSharp
             int iResult; // 문자가 변환된 정수 값을 받을 변수.
             bool bTorF;  // 정상적으로 변환하였는지 여부를 확인할수있는 변수
 
-            bTorF = int.TryParse(sValue1,out iResult);
+            bTorF = int.TryParse(sValue2,out iResult);
             MessageBox.Show(Convert.ToString(iResult));
 
             sValue1 = "0";

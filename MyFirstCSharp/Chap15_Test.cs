@@ -12,7 +12,7 @@ namespace MyFirstCSharp
 {
     public partial class Chap15_Test : Form
     {
-        int ibtnClickCount = 0;
+        int ibtnClickCount = 0;// 버튼을 클릭한 카운트 담을 변수. 클래스 필드멤버.
 
         public Chap15_Test()
         {
@@ -21,8 +21,8 @@ namespace MyFirstCSharp
 
         private void btnJudgge_Click(object sender, EventArgs e)
         {
-
-            ibtnClickCount + 1; // 버튼을 클릭한 카운트 담을 변수.
+            // 버튼을 클릭한 총 횟수 표현. 
+            ++ibtnClickCount;
             txtBtnClickCount.Text = ibtnClickCount.ToString();
 
 
@@ -51,6 +51,9 @@ namespace MyFirstCSharp
             //    MessageBox.Show("숫자로 변경 할 수 없는 값을 입력하였습니다.");
             //    return;
             //}
+
+            // 로직 상 걸러내고 시작해야 하는 필수 체크 사항을
+            // 먼저 검출하고 로직을 구현!
 
             // 1. 입력한 문자가 숫자로 바뀔수 있는 문자인지.
             bTF = int.TryParse(sVlue, out iResult);

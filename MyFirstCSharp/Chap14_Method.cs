@@ -327,12 +327,12 @@ namespace MyFirstCSharp
         #region < Out 참조전달 방식을 이용한 TryParse 메소드 만들어보기 >
         private void btnTryParse_Click(object sender, EventArgs e)
         {
-            string sValue = "234234"; // 숫자로 변경 될 문자
+            string sValue = "안녕"; // 숫자로 변경 될 문자
             int iResult;  // 변경된 숫자가 담기는 정수 변수.
             bool bFlag;   // TryParse 의 결과 가 담기는 변수.
 
             // TryParse 의 기능 복기.
-            //bFlag = int.TryParse(sValue, out iResult);
+            bFlag = int.TryParse(sValue, out iResult);
 
 
             // TryParse 기능 구현 실습

@@ -257,10 +257,11 @@ namespace MyFirstCSharp
                 return;
             }
 
-            string sResult = string.Empty; // string sResult = "";
+            //string sResult = string.Empty; 
+            string sResult = "";
 
-            MessageBox.Show((iTxtValue % 2 == 0) ? "짝수입니다." : "홀수입니다.");
-            
+            sResult = (iTxtValue % 2 == 0) ? "짝수입니다." : "홀수입니다.";
+            MessageBox.Show(sResult);
 
         }
     }

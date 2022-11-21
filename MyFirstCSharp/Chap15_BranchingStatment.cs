@@ -113,7 +113,8 @@ namespace MyFirstCSharp
             else
             {
                 MessageBox.Show("적절한 분기문이 없습니다.");
-            }
+                return;
+            }  
         }
 
         private void btnAndIf_Click(object sender, EventArgs e)
